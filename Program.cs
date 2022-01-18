@@ -15,61 +15,22 @@ namespace EnthusiasticMoose
           MooseSays("DERP DERP I'm HAPPY!");
 
           // Ask some questions!
-          CanadaQuestion();
-          EnthusiasticQuestion();
-          LoveCSharpQuestion();
-          SecretQuestion();
+          AskQuestion("Is Canada real?");
+          AskQuestion("Are you enthusiastic?");
+          AskQuestion("Do you love C# yet?");
+          AskQuestion("Do you want to know a secret?");
         }
 
-        static void EnthusiasticQuestion()
+        static void AskQuestion(string question)
         {
-            bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
-            if (isEnthusiastic)
-            {
-                MooseSays("Yay!");
-            }
-            else
-            {
-                MooseSays("You should try it!");
-            }
-        }
-
-        static void LoveCSharpQuestion()
-        {
-            bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
-            if (doesLoveCSharp)
-            {
-                MooseSays("Good job sucking up to your instructor!");
-            }
-            else
-            {
-                MooseSays("You will...oh, yes, you will...");
-            }
-        }
-
-        static void SecretQuestion()
-        {
-            bool isEverythingFine = MooseAsks("Do you want to know a secret?");
-            if (isEverythingFine)
-            {
-                MooseSays("ME TOO!!!! I love secrets...tell me one!");
-            }
-            else
-            {
-                MooseSays("Oh, no...secrets are the best, I love to share them!");
-            }
-        }
-
-        static void CanadaQuestion()
-        {
-          bool isTrue = MooseAsks("Is Canada real?");
+          bool isTrue = MooseAsks(question);
           if (isTrue)
           {
-            MooseSays("Really? It seems very unlikely.");
+            MooseSays("That's cool!");
           }
           else
           {
-            MooseSays("I  K N E W  I T !!!");
+            MooseSays("That's okay too.");
           }
         }
 
